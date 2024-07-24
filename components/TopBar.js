@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
-import { FontAwesome6 } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
 
 export default function TopBar({ text, backButton }) {
   const insets = useSafeAreaInsets();
@@ -23,13 +23,13 @@ export default function TopBar({ text, backButton }) {
         }}
       >
         {backButton ? (
-          <Ionicons name="arrow-back" size={34} color="blue" />
+          <Ionicons name="arrow-back" size={24} color="blue" />
         ) : (
-          <FontAwesome6 name="plus" size={34} color="blue" />
+          <Fontisto name="plus-a" size={24} color="blue" />
         )}
 
         {backButton && (
-          <Text style={{ color: "blue", fontSize: 24 }}>Back</Text>
+          <Text style={{ color: "blue", fontSize: 20 }}>Back</Text>
         )}
       </TouchableOpacity>
 
@@ -47,5 +47,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderBottomWidth: 2,
     paddingHorizontal: 5,
+    borderColor: "rgba(163, 163, 163, 0.57)",
   },
 });
